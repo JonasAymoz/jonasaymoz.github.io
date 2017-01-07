@@ -1,0 +1,20 @@
+
+@import 'variables';
+@import 'layout';
+@import 'texts';
+
+@font-face {
+  font-family: "jonas";
+  src: url("../fonts/Asgalt-Regular.ttf");
+}
+@font-face {
+  font-family: "bodyFont";
+  src: url("../fonts/Cocomat-Light.ttf");
+}
+h1 {
+	font-family : "jonas";
+}
+body {
+	font-family : "bodyFont";
+}
+

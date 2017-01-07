@@ -1,0 +1,46 @@
+
+// LAYOUT
+
+
+html, body {
+    margin: 0;
+
+}
+
+html, body, .container {
+  height: 100%;
+}
+.container {
+  display: flex;
+}
+
+.left {
+  padding: $main-padding;
+  flex: 2;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  flex : 1;
+
+
+  .top{
+  	flex: 1;
+  	display: flex;
+  	color : white;
+  	background: $secondary-color;
+  	padding: $main-padding;
+  	font-size: 2em;
+  	align-items: center;
+  	justify-content: center;
+  }
+  .bottom{
+	flex: 1;
+	padding: $main-padding;
+	background: green;
+	background : url('https://i1.wp.com/lostandtaken.com/wp-content/uploads/edd/2016/02/dirty-grungy-wood-texture-6.jpg?resize=780%2C585&ssl=1');
+	// background : url('http://graphicdesignjunction.com/wp-content/uploads/2013/03/wood-textures-high-quality-13.jpg');
+	background-size : cover;
+   }
+}
