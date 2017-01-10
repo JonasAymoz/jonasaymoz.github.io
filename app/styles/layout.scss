@@ -4,15 +4,20 @@
 
 html, body {
     margin: 0;
-
 }
 
-html, body, .container {
+html, body {
   height: 100%;
 }
 .container {
+  height : 80%;
+  padding : 5%;
   display: flex;
 }
+.test {
+ 
+}
+
 
 .left {
   padding: $main-padding;
@@ -24,23 +29,75 @@ html, body, .container {
   flex-direction: column;
   flex : 1;
 
+  .top, .bottom {
+    flex: 1;
+    margin: 10px;
+  }
 
   .top{
-  	flex: 1;
+  	
   	display: flex;
   	color : white;
   	background: $secondary-color;
   	padding: $main-padding;
   	font-size: 2em;
   	align-items: center;
-  	justify-content: center;
+  	justify-content: center; 
+   
   }
   .bottom{
-	flex: 1;
-	padding: $main-padding;
-	background: green;
-	background : url('https://i1.wp.com/lostandtaken.com/wp-content/uploads/edd/2016/02/dirty-grungy-wood-texture-6.jpg?resize=780%2C585&ssl=1');
-	// background : url('http://graphicdesignjunction.com/wp-content/uploads/2013/03/wood-textures-high-quality-13.jpg');
-	background-size : cover;
+  	
+  	padding: $main-padding;
+  	background : url('https://i1.wp.com/lostandtaken.com/wp-content/uploads/edd/2016/02/dirty-grungy-wood-texture-6.jpg?resize=780%2C585&ssl=1');
+  	background-size : cover;
+    
    }
 }
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bobble {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        animation-timing-function: ease-in;
+    }
+    50% {
+        transform: translate3d(20px, 40px, 0px);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: translate3d(150px, 200px, 0px);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: translate3d(5px, 500px, 0px);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        transform: translate3d(50px, 40px, 0px);
+    }
+}
+
+.bg {
+  position : absolute;
+  font-size : 10em;
+  max-height : 100%;
+  overflow: hidden;
+  width : 100%;
+  color : grey;
+  opacity :0.05;
+  z-index :-10;
+  span {
+    display : block;
+    text-shadow: -200px 200px 0 #04bda1, 680px -200px 0 #282b7d, 300px 5px 0 #ffa914, 500px 700px 0 grey;
+    animation : infinite-spinning 200s infinite linear;
+  }
+ 
+}
+
